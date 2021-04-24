@@ -4,6 +4,7 @@ import Image from "next/image";
 export default function Layout() {
   return (
     <div className={styles.containerWrapper}>
+      <div className={styles.overlay} />
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title}>Yakında Geliyoruz.</h1>
