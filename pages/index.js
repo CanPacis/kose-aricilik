@@ -8,6 +8,7 @@ export default class App extends React.Component {
       <div>
         <Head>
           <title>Köse Arıcılık - Yakında</title>
+          <link rel="shortcut icon" href="/images/ikon.png" />
         </Head>
         <Layout />
       </div>

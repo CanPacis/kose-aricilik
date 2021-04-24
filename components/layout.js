@@ -2,11 +2,14 @@ import styles from "./layout.module.css";
 import Image from "next/image";
 
 export default function Layout() {
+	const logoHeight = 24
+
   return (
     <div className={styles.containerWrapper}>
       <div className={styles.overlay} />
       <div className={styles.container}>
         <div className={styles.content}>
+					<Image height={logoHeight} width={2281 * logoHeight / 512} src="/images/logo.png" />
           <h1 className={styles.title}>Yakında Geliyoruz.</h1>
           <p className={styles.desc}>
             Uzun zamandır planladığımız web sitemiz şu anda hazırlanmaktadır.
