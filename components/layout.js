@@ -18,7 +18,7 @@ export default function Layout() {
           </p>
         </div>
         <div className={styles.action}>
-          <span className="socialIcon">
+          <span className={styles.socialIcon}>
             <a href="https://instagram.com/kosearicilik" target="_blank">
               <Image
                 src="/images/instagram.svg"
@@ -28,7 +28,7 @@ export default function Layout() {
               />
             </a>
           </span>
-          <span className="socialIcon">
+          <span className={styles.socialIcon}>
             <a href="https://www.facebook.com/kosearicilik" target="_blank">
               <Image
                 src="/images/facebook.svg"
