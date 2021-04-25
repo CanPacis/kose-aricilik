@@ -8,7 +8,6 @@ export default function Layout() {
     <div className={styles.containerWrapper}>
       <div className={styles.overlay} />
       <div className={styles.container}>
-        <div className={styles.content}>
 					<Image height={logoHeight} width={2281 * logoHeight / 512} src="/images/logo.png" />
           <h1 className={styles.title}>Yakında Geliyoruz.</h1>
           <p className={styles.desc}>
@@ -16,7 +15,6 @@ export default function Layout() {
             <br /> Bal ve arıcılık ürünleri alışverişleriniz için Ramazan
             Bayramı’nda hizmetindeyiz!
           </p>
-        </div>
         <div className={styles.action}>
           <span className={styles.socialIcon}>
             <a href="https://instagram.com/kosearicilik" target="_blank">

@@ -130,4 +130,8 @@ h1 {
 		--main-text-size: 18px;
 		--secondary-text-size: 16px;
 	}
+
+  h1 {
+    font-size: 34px;
+  }
 }
