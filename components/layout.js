@@ -13,7 +13,7 @@ export default function Layout() {
           <p className={styles.desc}>
             Uzun zamandır planladığımız web sitemiz şu anda hazırlanmaktadır.
             <br /> Bal ve arıcılık ürünleri alışverişleriniz için Ramazan
-            Bayramı’nda hizmetindeyiz!
+            Bayramı’ndan sonra hizmetindeyiz!
           </p>
         <div className={styles.action}>
           <span className={styles.socialIcon}>
