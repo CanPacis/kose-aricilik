@@ -1,0 +1,28 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+	background: #d1913c;
+	position: relative;
+  background: -webkit-linear-gradient(to right, #ffd194, #d1913c);
+  background: linear-gradient(to right, #ffd194, #d1913c);
+}
+
+.imageWrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(/images/kavanoz.webp);
+	background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: center left;
+	z-index: 1;
+}
+
+.title {
+	text-transform: uppercase;
+	color: white;
+	font-family: Gotham;
+	text-shadow: 1px 6px 10px rgba(0,0,0,0.08);
+}
