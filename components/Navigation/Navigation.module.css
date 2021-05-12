@@ -1,0 +1,36 @@
+.container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 140px;
+  flex: 0.2;
+}
+
+.links {
+  display: flex;
+	align-items: center;
+}
+
+.links ul {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.links ul li {
+  display: inline;
+  margin: 0 24px;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.social li {
+  margin: 0 12px !important;
+}
+
+
+.social a {
+  font-size: 24px;
+}
