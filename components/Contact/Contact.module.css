@@ -1,0 +1,9 @@
+.title {
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 46px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+  }
+  

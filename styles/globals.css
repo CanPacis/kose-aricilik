@@ -100,6 +100,7 @@
 
 :root {
   --main-text-size: 15px;
+  --title-text-size: 17px;
   --secondary-text-size: 13px;
   --main-light-text-color: #fff8ea;
   --main-dark-text-color: #402e32;
@@ -112,16 +113,21 @@ body {
   overflow-x: hidden;
   font-size: var(--main-text-size);
   font-family: "Avenir LT Pro 45 Book";
+  letter-spacing: 1.8;
 }
 
 *::selection {
-  background-color: var(--accent);
+  background-color: rgba(232, 176, 4, .4);
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+h1, h2, h3 {
+  letter-spacing: 1.6px;
 }
 
 h1 {

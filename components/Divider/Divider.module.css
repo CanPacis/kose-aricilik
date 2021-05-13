@@ -1,0 +1,31 @@
+.divider {
+  display: inline-flex;
+	opacity: 0.3;
+	align-items: center;
+}
+.horizontal {
+  width: 200px;
+  flex-direction: row;
+}
+.vertical {
+  height: 200px;
+  flex-direction: column;
+}
+
+.left,
+.right {
+  display: block;
+  background-color: var(--main-dark-text-color);
+  width: 1px;
+	height: 1px;
+  flex: 1;
+}
+
+.center {
+  display: block;
+  background-color: var(--main-dark-text-color);
+  width: 16px;
+  height: 16px;
+	border-radius: 16px;
+	margin: 0.7em;
+}

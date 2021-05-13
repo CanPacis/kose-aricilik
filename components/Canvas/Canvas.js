@@ -4,23 +4,13 @@ class Bubble {
   constructor(position, radius) {
     this.position = new Vector(position);
     this.radius = radius;
-    this.toggle = false;
-    this.growing = false;
+    this.toggled = false;
     this.opacity = 0.05;
-    this.velocity = 0.01;
+    this.angle = 0;
+    this.way = 0.1;
   }
 
   update() {
-    if (this.growing) {
-      this.velocity += 0.1;
-      if (this.toggle) {
-        this.radius += this.velocity;
-      } else {
-        this.radius -= this.velocity;
-      }
-    } else {
-      this.velocity = 0.01;
-    }
   }
 
   render(context) {
@@ -32,6 +22,19 @@ class Bubble {
     context.beginPath();
     context.arc(x, y, this.radius, 0, Math.PI * 2);
     context.fill();
+    context.closePath();
+
+    if (this.toggled) {
+      context.globalAlpha = 0.8;
+      context.strokeStyle = "#ffffff";
+      context.lineWidth = 5;
+      context.beginPath();
+      context.arc(x, y, this.radius - 10, 0, this.angle);
+      context.stroke();
+      context.closePath();
+      context.globalAlpha = this.opacity;
+    }
+
     context.restore();
   }
 }
@@ -65,6 +68,7 @@ export default class CanvasComponent extends React.Component {
   componentWillUnmount() {
     if (window) {
       window.removeEventListener("mousemove", this.handleMouseMove);
+      window.removeEventListener("click", this.handleClick);
       window.removeEventListener("resize", this.props.updateSize);
     }
   }
@@ -80,8 +84,8 @@ export default class CanvasComponent extends React.Component {
 
   init = () => {
     this.canvas = this.wrapper.current;
+    window.addEventListener("click", this.handleClick);
     window.addEventListener("mousemove", this.handleMouseMove);
-    this.canvas.addEventListener("click", this.handleClick);
     window.addEventListener("resize", this.props.updateSize);
 
     let state = this.state;
@@ -138,7 +142,11 @@ export default class CanvasComponent extends React.Component {
   };
 
   handleClick = (e) => {
-    
+    let shape = this.getShape(e);
+
+    if (shape) {
+      shape.toggled = !shape.toggled;
+    }
   };
 
   draw = (context) => {

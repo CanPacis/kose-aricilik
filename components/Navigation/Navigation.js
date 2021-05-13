@@ -39,13 +39,13 @@ export default class Navigation extends React.Component {
           </ul>
           <ul className={styles.social}>
             <li>
-              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a target="_blank" href="https://www.instagram.com/kosearicilik/"><i className="fab fa-instagram"></i></a>
             </li>
             <li>
-              <a href="#"><i className="fab fa-facebook"></i></a>
+              <a target="_blank" href="https://www.facebook.com/kosearicilik"><i className="fab fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-stripe-s"></i></a>
+              <a target="_blank" href="https://www.shopier.com/kosearicilik"><i className="fab fa-stripe-s"></i></a>
             </li>
           </ul>
         </div>
