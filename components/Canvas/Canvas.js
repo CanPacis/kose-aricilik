@@ -84,9 +84,9 @@ export default class CanvasComponent extends React.Component {
 
   init = () => {
     this.canvas = this.wrapper.current;
-    window.addEventListener("click", this.handleClick);
-    window.addEventListener("mousemove", this.handleMouseMove);
-    window.addEventListener("resize", this.props.updateSize);
+    // window.addEventListener("click", this.handleClick);
+    // window.addEventListener("mousemove", this.handleMouseMove);
+    // window.addEventListener("resize", this.props.updateSize);
 
     let state = this.state;
     state.shapes = [];

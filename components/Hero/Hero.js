@@ -15,6 +15,7 @@ export default class Hero extends React.Component {
       },
     };
 
+    this.wrapperRef = React.createRef();
     this.imageRef = React.createRef();
   }
 
@@ -30,15 +31,16 @@ export default class Hero extends React.Component {
   updateSize = () => {
     let state = this.state;
 
-    state.banner.width = window.innerWidth;
-    state.banner.height = window.innerHeight;
+    let rect = this.wrapperRef.current.getBoundingClientRect()
+    state.banner.width = rect.width;
+    state.banner.height = rect.height;
 
     this.setState(state);
   };
 
   render() {
     return (
-      <div className={styles.container}>
+      <div ref={this.wrapperRef} className={styles.container}>
         <img
           className={styles.backgroundImage}
           ref={this.imageRef}

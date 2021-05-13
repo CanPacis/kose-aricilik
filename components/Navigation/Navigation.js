@@ -22,11 +22,11 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <nav className={styles.container}>
-        <div className="logo">
+        <div className={styles.logo}>
           <img src="/images/logo.png" alt="Logo" height={60} />
         </div>
         <div className={styles.links}>
-          <ul>
+          <ul className={styles.inPage}>
             {this.state.links.map((link, i) => (
               <li
                 onClick={() => this.handleNavigation(link, i)}

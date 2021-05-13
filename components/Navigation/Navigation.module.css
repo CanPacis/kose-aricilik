@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 140px;
+  padding: var(--layout-padding);
   flex: 0.2;
 }
 
 .links {
   display: flex;
-	align-items: center;
+  align-items: center;
 }
 
 .links ul {
@@ -30,7 +30,26 @@
   margin: 0 12px !important;
 }
 
-
 .social a {
   font-size: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  .inPage, .social {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .links {
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .social a {
+    font-size: 20px;
+  }
 }

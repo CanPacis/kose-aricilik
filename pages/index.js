@@ -5,6 +5,7 @@ import Hero from "@/components/Hero/Hero";
 import Delivery from "@/components/Delivery/Delivery";
 import Catalog from "@/components/Catalog/Catalog";
 import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 
 const Home = () => (
   <div>
@@ -26,6 +27,7 @@ const Home = () => (
     <Delivery />
     <Catalog />
     <Contact />
+    <Footer />
   </div>
 );
 

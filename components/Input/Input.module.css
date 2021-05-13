@@ -1,0 +1,28 @@
+.input, .textarea {
+  border: 1px solid var(--grey);
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+	width: 100%;
+	transition: 100ms border;
+}
+
+.input {
+  padding: 16px 24px;
+	border-radius: 30px;
+}
+
+.textarea {
+  padding: 22px 24px;
+	border-radius: 26px;
+	min-height: 320px;
+	resize: none;
+}
+
+.input::placeholder, .textarea::placeholder {
+	text-transform: uppercase;
+}
+
+.input:focus, .textarea:focus {
+  border: 1px solid var(--primary);
+}

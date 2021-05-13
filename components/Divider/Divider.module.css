@@ -29,3 +29,11 @@
 	border-radius: 16px;
 	margin: 0.7em;
 }
+
+@media screen and (max-width: 900px) {
+  .vertical {
+    width: 200px;
+    flex-direction: row;
+    height: 40px;
+  }
+}

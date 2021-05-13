@@ -1,0 +1,14 @@
+.footer {
+  height: 80px;
+  background-color: var(--main-dark-text-color);
+  color: var(--main-light-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--title-text-size);
+  text-transform: uppercase;
+}
+
+.footer > * {
+  margin: 0 20px;
+}

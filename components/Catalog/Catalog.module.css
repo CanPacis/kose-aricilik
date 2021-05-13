@@ -1,7 +1,7 @@
 .title {
   color: var(--primary);
   font-weight: 900;
-  font-size: 46px;
+  font-size: var(--title-size);
   text-align: center;
   text-transform: uppercase;
   margin: 40px 0;
@@ -12,4 +12,11 @@
   justify-content: space-evenly;
   padding: 0 10vw;
   margin-bottom: 120px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    margin: 20px 0;
+  }
 }

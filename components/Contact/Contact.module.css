@@ -1,9 +1,45 @@
+.contactWrapper {
+  padding: var(--layout-padding);
+  display: flex;
+  margin-bottom: 120px;
+}
+
 .title {
-    color: var(--accent);
-    font-weight: 900;
-    font-size: 46px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 40px 0;
+  color: var(--accent);
+  font-weight: 900;
+  font-size: var(--title-size);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+.left,
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.left > *,
+.right > * {
+  margin: 10px 0;
+}
+
+.right {
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    margin: 20px 0;
   }
-  
+
+  .contactWrapper {
+    flex-direction: column;
+  }
+
+  .left > *,
+  .right > * {
+    margin: 4px 0;
+  }
+}
