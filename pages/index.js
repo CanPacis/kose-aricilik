@@ -19,7 +19,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <title>Dedemin Balları® - Bir Köse Arıcılık Markası</title>
           <link rel="shortcut icon" href="/images/favicon.png" />
           <link

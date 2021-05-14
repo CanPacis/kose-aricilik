@@ -39,6 +39,24 @@
   color: var(--main-light-text-color);
 }
 
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--main-light-text-color);
+  color: var(--main-dark-text-color);
+}
+
+.disabled.accent {
+  background-color: var(--accent);
+  color: var(--main-light-text-color);
+}
+
+.disabled.primary {
+  background-color: var(--primary);
+  color: var(--main-light-text-color);
+}
+
+
 @media screen and (max-width: 860px) {
   .button {
     padding: 12px 16px;

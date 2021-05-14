@@ -8,9 +8,24 @@ export default class Input extends React.Component {
 
   render() {
     if (this.props.type === "textarea") {
-      return <textarea placeholder={this.props.placeholder} className={styles.textarea}></textarea>;
+      return (
+        <textarea
+          onChange={this.props.onChange}
+          value={this.props.value}
+          placeholder={this.props.placeholder}
+          className={styles.textarea}
+        ></textarea>
+      );
     }
 
-    return <input placeholder={this.props.placeholder} className={styles.input} type="text" />;
+    return (
+      <input
+        onChange={this.props.onChange}
+        value={this.props.value}
+        placeholder={this.props.placeholder}
+        className={styles.input}
+        type="text"
+      />
+    );
   }
 }
