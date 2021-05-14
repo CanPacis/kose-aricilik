@@ -6,16 +6,24 @@ export default class Product extends React.Component {
     super(props);
   }
 
- 	handleClick = () => {}
+  handleClick = () => {
+    window.open(this.props.url, "_blank").focus();
+  };
 
   render() {
     return (
       <article onClick={this.handleClick} className={styles.card}>
         <img src={this.props.image} alt="product cover" />
-				<div className={styles.meta}>
-        <h3 className={styles.productTitle}>{this.props.title}</h3>
-        <p className={`${styles.productPrice} ${this.props.odd ? styles.oddPrice : ""}`}>{this.props.price}</p>
-				</div>
+        <div className={styles.meta}>
+          <h3 className={styles.productTitle}>{this.props.title}</h3>
+          <p
+            className={`${styles.productPrice} ${
+              this.props.odd ? styles.oddPrice : ""
+            }`}
+          >
+            {this.props.price}
+          </p>
+        </div>
       </article>
     );
   }
