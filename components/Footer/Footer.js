@@ -8,7 +8,7 @@ export default class Footer extends React.Component {
 
   render() {
     return <footer className={styles.footer}>
-			<span>Köse Arıcılık</span>
+			<span>Dedemin Balları ® - Bir Köse Arıcılık Markası</span>
 			<span>2021</span>
 		</footer>;
   }

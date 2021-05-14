@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
+import Meta from "@/components/Meta/Meta";
 import Hero from "@/components/Hero/Hero";
 import Delivery from "@/components/Delivery/Delivery";
 import Catalog from "@/components/Catalog/Catalog";
@@ -18,7 +19,8 @@ export default class Home extends React.Component {
     return (
       <div>
         <Head>
-          <title>Köse Arıcılık</title>
+          <meta charset="utf-8" />
+          <title>Dedemin Balları® - Bir Köse Arıcılık Markası</title>
           <link rel="shortcut icon" href="/images/favicon.png" />
           <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -30,6 +32,7 @@ export default class Home extends React.Component {
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
             crossOrigin="anonymous"
           />
+          <Meta />
         </Head>
         <Hero />
         <Delivery />
