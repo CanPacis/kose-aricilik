@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 import styles from "./Navigation.module.css";
 
 export default class Navigation extends React.Component {
@@ -10,6 +11,7 @@ export default class Navigation extends React.Component {
         { label: "Anasayfa", to: "#" },
         { label: "Katalog", to: "#catalog" },
         { label: "İletİşİm", to: "#contact" },
+        { label: "S.S.S.", to: "/sss" },
       ],
       index: 0,
     };
@@ -23,7 +25,7 @@ export default class Navigation extends React.Component {
     return (
       <nav className={styles.container}>
         <div className={styles.logo}>
-          <img src="/images/logo.png" alt="Logo" height={60} />
+          <img src="/images/logo.png" alt="Logo" />
         </div>
         <div className={styles.links}>
           <ul className={styles.inPage}>
@@ -33,7 +35,7 @@ export default class Navigation extends React.Component {
                 key={link.to}
                 className={i === this.state.index ? styles.active : ""}
               >
-                <a href={link.to}>{link.label}</a>
+                <Link href={link.to}>{link.label}</Link>
               </li>
             ))}
           </ul>

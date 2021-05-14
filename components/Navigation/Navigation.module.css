@@ -7,6 +7,10 @@
   flex: 0.2;
 }
 
+.logo img {
+  height: 60px;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -34,14 +38,32 @@
   font-size: 24px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+  .logo img {
+    height: 40px;
+  }
+
+  .links ul li {
+    margin: 0 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .links {
+    flex-direction: column;
+  }
+
   .logo {
     display: none;
   }
 
-  .inPage, .social {
-    flex-direction: column;
-    gap: 14px;
+  .inPage,
+  .social {
+    margin: 20px 0;
+  }
+
+  .links ul li {
+    margin: 0 10px;
   }
 
   .links {
@@ -51,5 +73,17 @@
 
   .social a {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    height: 80px;
+    margin-top: 20px;
+  }
+
+  .inPage,
+  .social {
+    margin: 10px 0;
   }
 }

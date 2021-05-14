@@ -17,6 +17,7 @@ export default class Hero extends React.Component {
 
     this.wrapperRef = React.createRef();
     this.imageRef = React.createRef();
+    this.constantHeight = null;
   }
 
   componentDidMount() {
@@ -31,9 +32,20 @@ export default class Hero extends React.Component {
   updateSize = () => {
     let state = this.state;
 
-    let rect = this.wrapperRef.current.getBoundingClientRect()
+    let rect = this.wrapperRef.current.getBoundingClientRect();
     state.banner.width = rect.width;
     state.banner.height = rect.height;
+
+    if (window.innerWidth < 650) {
+      if (!this.constantHeight) {
+        this.constantHeight = rect.height * 0.7;
+      }
+
+      state.banner.height = this.constantHeight;
+      this.wrapperRef.current.style.height = `${state.banner.height}px`;
+    } else {
+      this.wrapperRef.current.style.height = `100vh`;
+    }
 
     this.setState(state);
   };
