@@ -78,7 +78,7 @@ export default class Hero extends React.Component {
                   aliquyam erat, sed diam voluptua. At vero eos et accusam et
                   justo duo dolores et ea rebum.
                 </p>
-                <Button>Sİparİş Ver</Button>
+                <Button icon="cart_icon">Sİparİş Ver</Button>
               </div>
             </div>
             <div className={styles.more}>

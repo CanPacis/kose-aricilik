@@ -74,6 +74,7 @@ export default class Contact extends React.Component {
               type="textarea"
             />
             <Button
+              icon="send_icon"
               disabled={this.state.loading}
               onClick={this.sendMessage}
               type="accent"

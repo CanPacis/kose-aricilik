@@ -14,8 +14,9 @@ export default class Button extends React.Component {
         className={`${styles.button} ${styles[this.props.type]} ${
           this.props.disabled && styles.disabled
         }`}
-      >
+        >
         {this.props.children}
+        {this.props.icon && <img className={styles.icon} src={`/icons/${this.props.icon}.svg`} alt="sipariş" />}
       </button>
     );
   }

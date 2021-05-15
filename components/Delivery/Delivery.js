@@ -6,7 +6,7 @@ import Divider from "@/components/Divider/Divider";
 function Type(props) {
   return (
     <div className={styles.type}>
-        {props.icon ? <img height={60} src={props.icon} alt="delivery" /> : <span className={styles.typePlaceholder}></span>}
+        {props.icon ? <img className={styles.typeIcon} src={props.icon} alt="delivery" /> : <span className={styles.typePlaceholder}></span>}
       
       <h2 className={styles.typeTitle}>{props.title}</h2>
       <p className={styles.typeContent}>{props.children}</p>
@@ -22,17 +22,17 @@ export default class Delivery extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Type title="Gel-Al">
+        <Type icon="/images/gel_al.svg" title="Gel-Al">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy.
         </Type>
         <Divider orientation="vertical" />
-        <Type title="Kapıya Teslİm">
+        <Type icon="/images/kapiya_teslim.svg" title="Kapıya Teslİm">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy.
         </Type>
         <Divider orientation="vertical" />
-        <Type title="Kargo">
+        <Type icon="/images/online_siparis.svg" title="Kargo">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy.
         </Type>

@@ -1,6 +1,6 @@
 .button {
   display: flex;
-  padding: 14px 20px;
+  padding: 8px 20px;
   width: 180px;
   border-radius: 50px;
   justify-content: center;
@@ -46,9 +46,19 @@
   color: var(--main-dark-text-color);
 }
 
+.disabled .icon {
+  filter: invert(16%) sepia(9%) saturate(1340%) hue-rotate(296deg)
+    brightness(101%) contrast(90%);
+}
+
 .disabled.accent {
   background-color: var(--accent);
   color: var(--main-light-text-color);
+}
+
+.disabled.accent .icon {
+  filter: invert(100%) sepia(41%) saturate(3191%) hue-rotate(180deg)
+    brightness(112%) contrast(110%);
 }
 
 .disabled.primary {
@@ -56,10 +66,42 @@
   color: var(--main-light-text-color);
 }
 
+.disabled.primary .icon {
+  filter: invert(100%) sepia(41%) saturate(3191%) hue-rotate(180deg)
+    brightness(112%) contrast(110%);
+}
+
+.icon {
+  filter: invert(100%) sepia(41%) saturate(3191%) hue-rotate(180deg)
+    brightness(112%) contrast(110%);
+  margin-left: 10px;
+  height: 28px !important;
+}
+
+.accent .icon {
+  filter: invert(74%) sepia(37%) saturate(4044%) hue-rotate(314deg)
+    brightness(97%) contrast(101%);
+}
+
+.primary .icon {
+  filter: invert(60%) sepia(91%) saturate(1609%) hue-rotate(11deg)
+    brightness(106%) contrast(97%);
+}
+
+.button:hover .icon {
+  filter: invert(16%) sepia(9%) saturate(1340%) hue-rotate(296deg)
+    brightness(101%) contrast(90%);
+}
+
+.accent:hover .icon,
+.primary:hover .icon {
+  filter: invert(100%) sepia(41%) saturate(3191%) hue-rotate(180deg)
+    brightness(112%) contrast(110%);
+}
 
 @media screen and (max-width: 860px) {
   .button {
-    padding: 12px 16px;
+    /* padding: 12px 16px; */
     width: 140px;
   }
 }

@@ -26,6 +26,11 @@
   width: 80%;
 }
 
+.typeIcon {
+  height: 230px;
+  user-select: none;
+}
+
 .typePlaceholder {
   display: block;
   width: 60%;
