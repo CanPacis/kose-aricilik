@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
+import Modal from "@/components/Modal/Modal";
 import Service from "@/service/Service";
 
 export default class Contact extends React.Component {
@@ -13,6 +14,10 @@ export default class Contact extends React.Component {
       name: "",
       message: "",
       loading: false,
+      modal: {
+        open: false,
+        message: "",
+      },
     };
   }
 
@@ -21,7 +26,8 @@ export default class Contact extends React.Component {
   }
 
   sendMessage = async () => {
-    let { name, message } = this.state;
+    let state = this.state;
+    let { name, message } = state;
     let validName = this.validateString(name);
     let validMessage = this.validateString(message);
 
@@ -29,14 +35,24 @@ export default class Contact extends React.Component {
       this.setState({ loading: true });
       let result = await Service.SendMail(this.state);
       this.setState({ loading: false });
-
+      state.modal.open = true;
       if (result.status === 200) {
-        this.setState({ name: "", message: "" });
-        alert("Mesaj başarıyla gönderildi.");
+        state.name = "";
+        state.message = "";
+        state.modal.message = "Mesaj başarıyla gönderildi.";
       } else {
-        alert(`Mesaj gönderilirken bir hata oluştu. ${result.response}.`);
+        state.modal.message = `Mesaj gönderilirken bir hata oluştu. ${result.response}.`;
       }
+      this.setState(state);
     }
+  };
+
+  handleModalClose = () => {
+    let state = this.state;
+
+    state.modal.open = false;
+    state.modal.message = "";
+    this.setState(state);
   };
 
   render() {
@@ -84,6 +100,12 @@ export default class Contact extends React.Component {
             </Button>
           </div>
         </div>
+        <Modal
+          onClose={() => this.handleModalClose()}
+          open={this.state.modal.open}
+        >
+          <p>{this.state.modal.message}</p>
+        </Modal>
       </div>
     );
   }

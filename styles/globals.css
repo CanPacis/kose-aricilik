@@ -78,6 +78,10 @@ a {
   text-decoration: none;
 }
 
+body.openModal {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1200px) {
   :root {
     --layout-padding: 0 80px;

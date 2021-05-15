@@ -15,7 +15,20 @@ export default class Home extends React.Component {
     return { products: json };
   }
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    // let document
+    // if (document) {
+    //   if (this.state.openModal) {
+    //     document.body.classList.add("openModal");
+    //   } else {
+    //     document.body.classList.remove("openModal");
+    //   }
+    // }
+
     return (
       <div>
         <Head>
