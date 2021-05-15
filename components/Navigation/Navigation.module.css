@@ -25,6 +25,7 @@
 .links ul li {
   display: inline;
   margin: 0 24px;
+  cursor: pointer;
 }
 
 .active {

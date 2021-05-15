@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link"
+import Link from "next/link";
 import styles from "./Navigation.module.css";
 
 export default class Navigation extends React.Component {
@@ -8,10 +8,10 @@ export default class Navigation extends React.Component {
 
     this.state = {
       links: [
-        { label: "Anasayfa", to: "#" },
-        { label: "Katalog", to: "#catalog" },
-        { label: "İletİşİm", to: "#contact" },
-        { label: "S.S.S.", to: "/sss" },
+        { label: "Anasayfa", to: "nav", type: "inpage" },
+        { label: "Katalog", to: "#catalog", type: "inpage" },
+        { label: "İletİşİm", to: "#contact", type: "inpage" },
+        { label: "S.S.S.", to: "/sss", type: "redirect" },
       ],
       index: 0,
     };
@@ -19,6 +19,15 @@ export default class Navigation extends React.Component {
 
   handleNavigation = (link, i) => {
     this.setState({ index: i });
+  };
+
+  scroll = (target) => {
+    if (document) {
+      const element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   render() {
@@ -35,19 +44,29 @@ export default class Navigation extends React.Component {
                 key={link.to}
                 className={i === this.state.index ? styles.active : ""}
               >
-                <Link href={link.to}>{link.label}</Link>
+                {link.type === "inpage" ? (
+                  <span onClick={() => this.scroll(link.to)}>{link.label}</span>
+                ) : (
+                  <Link href={link.to}>{link.label}</Link>
+                )}
               </li>
             ))}
           </ul>
           <ul className={styles.social}>
             <li>
-              <a target="_blank" href="https://www.instagram.com/kosearicilik/"><i className="fab fa-instagram"></i></a>
+              <a target="_blank" href="https://www.instagram.com/kosearicilik/">
+                <i className="fab fa-instagram"></i>
+              </a>
             </li>
             <li>
-              <a target="_blank" href="https://www.facebook.com/kosearicilik"><i className="fab fa-facebook"></i></a>
+              <a target="_blank" href="https://www.facebook.com/kosearicilik">
+                <i className="fab fa-facebook"></i>
+              </a>
             </li>
             <li>
-              <a target="_blank" href="https://www.shopier.com/kosearicilik"><i className="fab fa-stripe-s"></i></a>
+              <a target="_blank" href="https://www.shopier.com/kosearicilik">
+                <i className="fab fa-stripe-s"></i>
+              </a>
             </li>
           </ul>
         </div>
