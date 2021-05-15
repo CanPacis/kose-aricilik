@@ -20,6 +20,7 @@ export default class Input extends React.Component {
 
     return (
       <input
+        autoComplete="off"
         onChange={this.props.onChange}
         value={this.props.value}
         placeholder={this.props.placeholder}

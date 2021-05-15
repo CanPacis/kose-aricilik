@@ -17,23 +17,27 @@ export default class Home extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = { language: null };
   }
 
-  render() {
-    // let document
-    // if (document) {
-    //   if (this.state.openModal) {
-    //     document.body.classList.add("openModal");
-    //   } else {
-    //     document.body.classList.remove("openModal");
-    //   }
-    // }
+  componentDidMount() {
+    this.setState({
+      language: window?.localStorage.getItem("language") || "en",
+    });
+  }
 
+  changeLanguage = (language) => {
+    this.setState({ language });
+    window?.localStorage.setItem("language", language);
+  };
+
+  render() {
     return (
       <div>
         <Head>
           <meta charSet="utf-8" />
-          <title>Dedemin Balları® - Bir Köse Arıcılık Markası</title>
+          <title>Dedmin Balları</title>
           <link rel="shortcut icon" href="/images/favicon.png" />
           <link
             rel="stylesheet"
@@ -43,11 +47,23 @@ export default class Home extends React.Component {
           />
           <Meta />
         </Head>
-        <Hero />
-        <Delivery />
-        <Catalog products={this.props.products} />
-        <Contact />
-        <Footer />
+        {this.state.language !== null ? (
+          <>
+            <Hero
+              changeLanguage={this.changeLanguage}
+              language={this.state.language}
+            />
+            <Delivery language={this.state.language} />
+            <Catalog
+              products={this.props.products}
+              language={this.state.language}
+            />
+            <Contact language={this.state.language} />
+            <Footer language={this.state.language} />
+          </>
+        ) : (
+          <div>Loading</div>
+        )}
       </div>
     );
   }

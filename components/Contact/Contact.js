@@ -26,6 +26,8 @@ export default class Contact extends React.Component {
   }
 
   sendMessage = async () => {
+    let language = Service.Language.languages[this.props.language];
+
     let state = this.state;
     let { name, message } = state;
     let validName = this.validateString(name);
@@ -39,9 +41,9 @@ export default class Contact extends React.Component {
       if (result.status === 200) {
         state.name = "";
         state.message = "";
-        state.modal.message = "Mesaj başarıyla gönderildi.";
+        state.modal.message = language.alert.sent;
       } else {
-        state.modal.message = `Mesaj gönderilirken bir hata oluştu. ${result.response}.`;
+        state.modal.message = language.alert.error(result.response)
       }
       this.setState(state);
     }
@@ -56,38 +58,35 @@ export default class Contact extends React.Component {
   };
 
   render() {
+    let language = Service.Language.languages[this.props.language];
+
     return (
       <div>
         <h1 className={styles.title} id="contact">
-          İletİşİm
+          {language.contact}
         </h1>
 
         <div className={styles.contactWrapper}>
           <div className={styles.left}>
             <span>
-              <h2>Adres</h2>
-              <p className={styles.description}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-                distinctio quia odit. Enim quibusdam eaque officia saepe dolor,
-                adipisci atque minus non ratione id, incidunt qui odio
-                recusandae hic sit!
-              </p>
+              <h2>{language.address.title}</h2>
+              <p className={styles.description}>{language.address.content}</p>
             </span>
             <span>
-              <h2>Telefon</h2>
-              <p className={styles.description}>+90 555 555 55 55</p>
+              <h2>{language.phone.title}</h2>
+              <p className={styles.description}>{language.phone.content}</p>
             </span>
           </div>
           <div className={styles.right}>
             <Input
               onChange={(e) => this.setState({ name: e.target.value })}
               value={this.state.name}
-              placeholder="İsİm"
+              placeholder={language.name}
             />
             <Input
               onChange={(e) => this.setState({ message: e.target.value })}
               value={this.state.message}
-              placeholder="mesaj"
+              placeholder={language.message}
               type="textarea"
             />
             <Button
@@ -96,11 +95,12 @@ export default class Contact extends React.Component {
               onClick={this.sendMessage}
               type="accent"
             >
-              Gönder
+              {language.send}
             </Button>
           </div>
         </div>
         <Modal
+          language={this.props.language}
           onClose={() => this.handleModalClose()}
           open={this.state.modal.open}
         >

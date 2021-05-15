@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Catalog.module.css";
 
 import Product from "@/components/Product/Product";
+import Service from "@/service/Service";
 
 export default class Catalog extends React.Component {
   constructor(props) {
@@ -25,15 +26,17 @@ export default class Catalog extends React.Component {
         />
       ));
     } else {
-      return <h2>Henüz Bir Ürün Yok</h2>;
+      return <h2>{language.no_product_yet}</h2>;
     }
   };
 
   render() {
+    let language = Service.Language.languages[this.props.language];
+
     return (
       <div>
         <h1 className={styles.title} id="catalog">
-          Katalog
+          {language.catalog}
         </h1>
         <div className={styles.productsWrapper}>{this.renderProducts()}</div>
       </div>

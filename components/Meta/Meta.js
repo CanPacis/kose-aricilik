@@ -51,7 +51,7 @@ export default class Meta extends React.Component {
         />
         <meta name="og:url" content="http://kosearicilik.com" />
         <meta name="og:site_name" content="Köse Arıcılık" />
-        <meta name="og:locale" content="tr" />
+        <meta name="og:locale" content={this.props.language} />
         <meta name="og:type" content="product" />
         {/* <!-- Open Graph - Product (e-commerce) --> */}
         <meta name="product:availability" content="instock" />

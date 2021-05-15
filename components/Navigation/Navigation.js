@@ -2,16 +2,24 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Navigation.module.css";
 
+import Service from "@/service/Service"
+
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
+    let language = Service.Language.languages[this.props.language]
+
     this.state = {
       links: [
-        { label: "Anasayfa", to: "nav", type: "inpage" },
-        { label: "Katalog", to: "#catalog", type: "inpage" },
-        { label: "İletİşİm", to: "#contact", type: "inpage" },
-        { label: "S.S.S.", to: "/sss", type: "redirect" },
+        { label: language.homepage, to: "nav", type: "inpage" },
+        { label: language.catalog, to: "#catalog", type: "inpage" },
+        { label: language.contact, to: "#contact", type: "inpage" },
+        { label: language.faq, to: "/faq", type: "redirect" },
+      ],
+      language: [
+        { label: "tr", id: "tr" },
+        { label: "en", id: "en" },
       ],
       index: 0,
     };
@@ -68,6 +76,9 @@ export default class Navigation extends React.Component {
                 <i className="fab fa-stripe-s"></i>
               </a>
             </li>
+          </ul>
+          <ul>
+            {this.state.language.map(lang => <li onClick={() => this.props.changeLanguage(lang.id)} key={lang.id}>{lang.label}</li>)}
           </ul>
         </div>
       </nav>
