@@ -1,28 +1,32 @@
-.input, .textarea {
-  border: 1px solid var(--grey);
-	font-size: inherit;
-	font-family: inherit;
-	color: inherit;
-	width: 100%;
-	transition: 100ms border;
+.input,
+.textarea {
+  border: 1px solid transparent;
+	background-color: var(--grey);
+  font-size: 13px;
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  transition: 100ms border;
 }
 
 .input {
   padding: 16px 24px;
-	border-radius: 30px;
+  border-radius: 30px;
 }
 
 .textarea {
   padding: 22px 24px;
-	border-radius: 26px;
-	min-height: 320px;
-	resize: none;
+  border-radius: 26px;
+  min-height: 320px;
+  resize: none;
 }
 
-.input::placeholder, .textarea::placeholder {
-	text-transform: uppercase;
+.input::placeholder,
+.textarea::placeholder {
+  text-transform: uppercase;
 }
 
-.input:focus, .textarea:focus {
+.input:focus,
+.textarea:focus {
   border: 1px solid var(--primary);
 }

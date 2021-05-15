@@ -10,6 +10,7 @@
   border: 2px solid var(--main-light-text-color);
   text-transform: uppercase;
   font-size: inherit;
+  font-family: inherit;
   cursor: pointer;
   transition: 200ms;
 }

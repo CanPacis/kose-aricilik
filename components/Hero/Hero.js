@@ -8,63 +8,13 @@ export default class Hero extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      banner: {
-        width: 0,
-        height: 0,
-      },
-    };
-
     this.wrapperRef = React.createRef();
     this.imageRef = React.createRef();
-    this.constantHeight = null;
   }
-
-  componentDidMount() {
-    this.updateSize();
-    window.addEventListener("resize", this.updateSize);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateSize);
-  }
-
-  updateSize = () => {
-    let state = this.state;
-
-    let rect = this.wrapperRef.current.getBoundingClientRect();
-    state.banner.width = rect.width;
-    state.banner.height = rect.height;
-
-    if (window.innerWidth < 650) {
-      if (!this.constantHeight) {
-        this.constantHeight = rect.height * 0.7;
-      }
-
-      state.banner.height = this.constantHeight;
-      this.wrapperRef.current.style.height = `${state.banner.height}px`;
-    } else {
-      this.wrapperRef.current.style.height = `100vh`;
-    }
-
-    this.setState(state);
-  };
 
   render() {
     return (
       <div ref={this.wrapperRef} className={styles.container}>
-        {/* <img
-          className={styles.backgroundImage}
-          ref={this.imageRef}
-          width={this.state.banner.width}
-          height={this.state.banner.height}
-          src="/images/bg.svg"
-        /> */}
-        {/* <CanvasComponent
-          updateSize={this.updateSize}
-          width={this.state.banner.width}
-          height={this.state.banner.height}
-        /> */}
         <div className={styles.main}>
           <Navigation />
           <div className={styles.bannerWrapper}>
