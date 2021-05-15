@@ -13,7 +13,7 @@ export default class Button extends React.Component {
         onClick={this.props.onClick}
         className={`${styles.button} ${styles[this.props.type]} ${
           this.props.disabled && styles.disabled
-        }`}
+        } ${this.props.shiny && styles.shiny}`}
         >
         {this.props.children}
         {this.props.icon && <img className={styles.icon} src={`/icons/${this.props.icon}.svg`} alt="sipariş" />}

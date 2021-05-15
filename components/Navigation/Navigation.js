@@ -25,7 +25,7 @@ export default class Navigation extends React.Component {
     return (
       <nav className={styles.container}>
         <div className={styles.logo}>
-          <img src="/images/logo.png" alt="Logo" />
+          <img src="/images/logo_dark.png" alt="Logo" />
         </div>
         <div className={styles.links}>
           <ul className={styles.inPage}>

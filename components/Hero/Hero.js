@@ -53,23 +53,22 @@ export default class Hero extends React.Component {
   render() {
     return (
       <div ref={this.wrapperRef} className={styles.container}>
-        <img
+        {/* <img
           className={styles.backgroundImage}
           ref={this.imageRef}
           width={this.state.banner.width}
           height={this.state.banner.height}
           src="/images/bg.svg"
-        />
-        <CanvasComponent
+        /> */}
+        {/* <CanvasComponent
           updateSize={this.updateSize}
           width={this.state.banner.width}
           height={this.state.banner.height}
-        />
+        /> */}
         <div className={styles.main}>
           <Navigation />
           <div className={styles.bannerWrapper}>
             <div className={styles.body}>
-              <img src="/images/kavanoz.webp" alt="Kavanoz" />
               <div className={styles.text}>
                 <h1>LOREM IPSUM DOLOR SIT AMET.</h1>
                 <p>
@@ -78,11 +77,14 @@ export default class Hero extends React.Component {
                   aliquyam erat, sed diam voluptua. At vero eos et accusam et
                   justo duo dolores et ea rebum.
                 </p>
-                <Button icon="cart_icon">Sİparİş Ver</Button>
+                <Button shiny type="primary" icon="cart_icon">
+                  Sİparİş Ver
+                </Button>
               </div>
+              <img src="/images/kavanoz.webp" alt="Kavanoz" />
             </div>
             <div className={styles.more}>
-              <i className={`material-icons`}>expand_more</i>
+              <img src="/icons/down_icon.svg" alt="dahası" />
             </div>
           </div>
         </div>

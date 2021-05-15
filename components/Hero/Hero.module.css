@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  color: var(--main-light-text-color);
+  /* color: var(--main-light-text-color); */
 }
 
 .container canvas,
@@ -42,9 +42,9 @@
 
 .text {
   flex: 1;
-  text-align: center;
+  /* text-align: center; */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -66,8 +66,8 @@
   user-select: none;
 }
 
-.more i {
-  font-size: 64px;
+.more img {
+  height: 48px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -102,7 +102,7 @@
     margin: 8px 0 12px 0;
     font-size: 16px;
   }
-  .more i {
-    font-size: 32px;
+  .more img {
+    height: 24px;
   }
 }

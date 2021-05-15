@@ -31,6 +31,7 @@ export default class Contact extends React.Component {
       this.setState({ loading: false });
 
       if (result.status === 200) {
+        this.setState({ name: "", message: "" });
         alert("Mesaj başarıyla gönderildi.");
       } else {
         alert(`Mesaj gönderilirken bir hata oluştu. ${result.response}.`);
