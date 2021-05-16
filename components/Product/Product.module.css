@@ -14,6 +14,10 @@
   height: 160px;
   object-fit: contain;
   user-select: none;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
 }
 
 .meta {
@@ -39,4 +43,10 @@
 
 .oddPrice {
   color: var(--accent);
+}
+
+@media screen and (max-width: 860px) {
+  .card {
+    padding: 28px 30px;
+  }
 }

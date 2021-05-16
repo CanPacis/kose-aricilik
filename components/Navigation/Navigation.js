@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Navigation.module.css";
+import { withRouter } from "next/router";
 
 import Service from "@/service/Service";
 
-export default class Navigation extends React.Component {
+class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,7 +26,10 @@ export default class Navigation extends React.Component {
     this.setState({ index: i, isMobileMenuOpen: false });
   };
 
-  scroll = (target) => {
+  scroll = async (target) => {
+    if (this.props.router.pathname !== "/") {
+      await this.props.router.push("/");
+    }
     if (document) {
       const element = document.querySelector(target);
       if (element) {
@@ -66,7 +70,7 @@ export default class Navigation extends React.Component {
         {this.state.links ? (
           <>
             <div className={styles.logo}>
-              <img src="/images/logo_dark.png" alt="Logo" />
+              <Link href="/"><img src="/images/logo_dark.png" alt="Logo" /></Link>
             </div>
             <div className={styles.links}>
               <ul className={styles.inPage}>
@@ -130,19 +134,6 @@ export default class Navigation extends React.Component {
                   </li>
                 ))}
               </ul>
-              {/* <ul className={styles.language}>
-                {this.state.language.map((lang) => (
-                  <li
-                    onClick={() => this.props.changeLanguage(lang.id)}
-                    key={lang.id}
-                    className={`${
-                      this.props.language === lang.id && styles.active
-                    }`}
-                  >
-                    {lang.label}
-                  </li>
-                ))}
-              </ul> */}
               <img
                 onClick={() => this.toggleMenu(false)}
                 style={{ margin: "40px 0", cursor: "pointer" }}
@@ -159,3 +150,5 @@ export default class Navigation extends React.Component {
     );
   }
 }
+
+export default withRouter(Navigation);

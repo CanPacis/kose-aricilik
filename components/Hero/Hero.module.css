@@ -33,7 +33,7 @@
   padding: var(--layout-padding);
 }
 
-.body img {
+.body > img {
   height: 36vw;
   flex: 1;
   object-fit: contain;
@@ -42,7 +42,6 @@
 
 .text {
   flex: 1;
-  /* text-align: center; */
   display: flex;
   align-items: flex-start;
   flex-direction: column;

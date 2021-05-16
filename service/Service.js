@@ -40,9 +40,9 @@ export default class Service {
         faq: "S.S.S.",
         ok: "Tamam",
         hero: {
-          title: "LOREM IPSUM DOLOR SIT AMET.",
+          title: "DEDEMİN BALLARI",
           content:
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.",
         },
         order: "Sİpariş Ver",
         send: "Gönder",
@@ -89,9 +89,9 @@ export default class Service {
         faq: "FAQ",
         ok: "Okay",
         hero: {
-          title: "LOREM IPSUM DOLOR SIT AMET.",
+          title: "DEDEMİN BALLARI",
           content:
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.",
         },
         order: "Order",
         send: "Send",
