@@ -38,6 +38,7 @@ export default class Service {
         catalog: "Katalog",
         contact: "İLETİŞİM",
         faq: "S.S.S.",
+        faq_full: "Sıkça Sorulan Sorular",
         ok: "Tamam",
         hero: {
           title: "DEDEMİN BALLARI",
@@ -80,13 +81,14 @@ export default class Service {
           sent: "Mesaj Başarıyla Gönderildi",
           error: (message) => `Mesaj Gönderilirken Bir Hata Olştu. ${message}`,
         },
-        no_product_yet: "Henüz Bir Ürün Yok"
+        no_product_yet: "Henüz Bir Ürün Yok",
       },
       en: {
         homepage: "Homepage",
         catalog: "Catalog",
         contact: "Contact",
         faq: "FAQ",
+        faq_full: "Frequently Asked Questions",
         ok: "Okay",
         hero: {
           title: "DEDEMİN BALLARI",
@@ -130,7 +132,7 @@ export default class Service {
           error: (message) =>
             `An Error Occurred While Sending Your Message. ${message}`,
         },
-        no_product_yet: "There Are No Products Yet"
+        no_product_yet: "There Are No Products Yet",
       },
     },
   };

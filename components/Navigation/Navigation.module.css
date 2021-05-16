@@ -13,7 +13,6 @@
 
 .logo img {
   height: 50px;
-  margin-left: -20px;
 }
 
 .links {
@@ -107,9 +106,5 @@
   .container {
     height: 80px;
     margin-top: 20px;
-  }
-
-  .logo > img {
-    margin-left: 0;
   }
 }
