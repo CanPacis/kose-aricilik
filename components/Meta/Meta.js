@@ -19,12 +19,12 @@ export default class Meta extends React.Component {
         />
         {/* <!-- Schema.org for Google --> */}
         <meta
-          itemprop="name"
+          itemProp="name"
           content="Dedemin Balları® - Bir Köse Arıcılık Markası"
         />
-        <meta itemprop="description" content={description} />
+        <meta itemProp="description" content={description} />
         <meta
-          itemprop="image"
+          itemProp="image"
           content={`${assetLink}/images/logo_dark.png`}
         />
         {/* <!-- Twitter --> */}

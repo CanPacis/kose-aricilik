@@ -20,6 +20,7 @@ export default class Hero extends React.Component {
 
   render() {
     let language = Service.Language.languages[this.props.language];
+    console.log(language)
 
     return (
       <div ref={this.wrapperRef} className={styles.container}>

@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  /* color: var(--main-light-text-color); */
+  font-family: "MainFont";
 }
 
 .container canvas,

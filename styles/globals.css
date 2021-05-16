@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap'); */
+
 @font-face {
   font-family: "MainFont";
   font-style: normal;
@@ -21,6 +24,14 @@
     url("font/h-bold.ttf") format("truetype");
 }
 
+/* @font-face {
+  font-family: "Avant Garde";
+  font-style: normal;
+  font-weight: 500;
+  src: local("a"),
+    url("font/a.ttf") format("truetype");
+} */
+
 :root {
   --main-text-size: 15px;
   --title-text-size: 17px;
@@ -40,8 +51,8 @@ body {
   font-weight: 500;
   font-size: var(--main-text-size);
   color: var(--main-dark-text-color);
-  font-family: "MainFont";
-  letter-spacing: 1.8;
+  font-family: "Poppins";
+  /* letter-spacing: 1.2; */
 }
 
 *::selection {
@@ -61,7 +72,7 @@ ul {
 h1,
 h2,
 h3 {
-  letter-spacing: 1.6px;
+  /* letter-spacing: 1.1px; */
 }
 
 h1 {
