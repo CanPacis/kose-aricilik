@@ -22,7 +22,7 @@ export default class Navigation extends React.Component {
   }
 
   handleNavigation = (link, i) => {
-    this.setState({ index: i });
+    this.setState({ index: i, isMobileMenuOpen: false });
   };
 
   scroll = (target) => {
@@ -50,9 +50,14 @@ export default class Navigation extends React.Component {
         { label: "en", id: "en" },
       ],
       index: 0,
+      isMobileMenuOpen: false,
     };
 
     this.setState(state);
+  };
+
+  toggleMenu = (isMobileMenuOpen) => {
+    this.setState({ isMobileMenuOpen });
   };
 
   render() {
@@ -107,7 +112,7 @@ export default class Navigation extends React.Component {
                   </a>
                 </li>
               </ul>
-              <ul>
+              {/* <ul>
                 {this.state.language.map((lang) => (
                   <li
                     onClick={() => this.props.changeLanguage(lang.id)}
@@ -116,7 +121,45 @@ export default class Navigation extends React.Component {
                     {lang.label}
                   </li>
                 ))}
+              </ul> */}
+            </div>
+            <div className={styles.mobileMenu}>
+              <img
+                onClick={() => this.toggleMenu(true)}
+                height={32}
+                src="/icons/hamburger_menu.svg"
+                alt="menu"
+              />
+            </div>
+            <div
+              className={`${styles.menuWrapper} ${
+                this.state.isMobileMenuOpen && styles.mobileOpen
+              }`}
+            >
+              <ul className={styles.inPage}>
+                {this.state.links.map((link, i) => (
+                  <li
+                    onClick={() => this.handleNavigation(link, i)}
+                    key={link.to}
+                    className={i === this.state.index ? styles.active : ""}
+                  >
+                    {link.type === "inpage" ? (
+                      <h2 onClick={() => this.scroll(link.to)}>{link.label}</h2>
+                    ) : (
+                      <Link href={link.to}>
+                        <h2>{link.label}</h2>
+                      </Link>
+                    )}
+                  </li>
+                ))}
               </ul>
+              <img
+                onClick={() => this.toggleMenu(false)}
+                style={{ margin: "40px 0", cursor: "pointer" }}
+                height={32}
+                src="/icons/hamburger_menu.svg"
+                alt="menu"
+              />
             </div>
           </>
         ) : (

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
 
 @font-face {
   font-family: "MainFont";
@@ -12,25 +11,15 @@
   font-family: "MainFont";
   font-style: normal;
   font-weight: 500;
-  src: local("h"),
-    url("font/h.ttf") format("truetype");
+  src: local("h"), url("font/h.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "MainFont";
   font-style: normal;
   font-weight: 900;
-  src: local("h-bold"),
-    url("font/h-bold.ttf") format("truetype");
+  src: local("h-bold"), url("font/h-bold.ttf") format("truetype");
 }
-
-/* @font-face {
-  font-family: "Avant Garde";
-  font-style: normal;
-  font-weight: 500;
-  src: local("a"),
-    url("font/a.ttf") format("truetype");
-} */
 
 :root {
   --main-text-size: 15px;
@@ -41,7 +30,7 @@
   --primary: #e8b004;
   --accent: #f97b6d;
   --grey: #f9f9f9;
-  --layout-padding: 0 140px;
+  --layout-padding: 0 100px;
   --title-size: 46px;
 }
 
@@ -52,7 +41,6 @@ body {
   font-size: var(--main-text-size);
   color: var(--main-dark-text-color);
   font-family: "Poppins";
-  /* letter-spacing: 1.2; */
 }
 
 *::selection {
@@ -67,12 +55,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-h1,
-h2,
-h3 {
-  /* letter-spacing: 1.1px; */
 }
 
 h1 {
