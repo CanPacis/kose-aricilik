@@ -1,14 +1,45 @@
 .footer {
-  height: 80px;
   background-color: var(--main-dark-text-color);
   color: var(--main-light-text-color);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: var(--title-text-size);
   text-transform: uppercase;
+  padding: 20px 0;
 }
 
 .footer > * {
+  margin: 10px 0;
+}
+
+.top > * {
   margin: 0 20px;
+}
+
+.social {
+  display: flex;
+}
+
+.social li {
+  margin: 0 10px;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    font-size: 11px;
+  }
+  .footer > * {
+    margin: 8px 0;
+  }
+
+  .top > * {
+    margin: 0 8px;
+  }
+
+  .social li {
+    font-size: 17px;
+  }
 }

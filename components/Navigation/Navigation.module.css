@@ -27,19 +27,11 @@
   text-transform: uppercase;
 }
 
-.links ul li {
+.links .inPage li {
   display: inline;
   margin: 0 24px;
   cursor: pointer;
   font-weight: 700;
-}
-
-.social li {
-  margin: 0 12px !important;
-}
-
-.social a {
-  font-size: 24px;
 }
 
 .mobileMenu {
@@ -84,6 +76,16 @@
 .mobileOpen {
   visibility: visible;
   opacity: 1;
+}
+
+.language li {
+  margin: 0 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 700 !important;
 }
 
 @media screen and (max-width: 860px) {

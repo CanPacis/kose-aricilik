@@ -86,42 +86,19 @@ export default class Navigation extends React.Component {
                   </li>
                 ))}
               </ul>
-              <ul className={styles.social}>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/kosearicilik/"
-                  >
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/kosearicilik"
-                  >
-                    <i className="fab fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.shopier.com/kosearicilik"
-                  >
-                    <i className="fab fa-stripe-s"></i>
-                  </a>
-                </li>
-              </ul>
-              {/* <ul>
+              <ul className={styles.language}>
                 {this.state.language.map((lang) => (
                   <li
                     onClick={() => this.props.changeLanguage(lang.id)}
                     key={lang.id}
+                    className={`${
+                      this.props.language === lang.id && styles.active
+                    }`}
                   >
                     {lang.label}
                   </li>
                 ))}
-              </ul> */}
+              </ul>
             </div>
             <div className={styles.mobileMenu}>
               <img
@@ -153,6 +130,19 @@ export default class Navigation extends React.Component {
                   </li>
                 ))}
               </ul>
+              {/* <ul className={styles.language}>
+                {this.state.language.map((lang) => (
+                  <li
+                    onClick={() => this.props.changeLanguage(lang.id)}
+                    key={lang.id}
+                    className={`${
+                      this.props.language === lang.id && styles.active
+                    }`}
+                  >
+                    {lang.label}
+                  </li>
+                ))}
+              </ul> */}
               <img
                 onClick={() => this.toggleMenu(false)}
                 style={{ margin: "40px 0", cursor: "pointer" }}

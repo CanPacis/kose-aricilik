@@ -62,7 +62,9 @@ export default class Home extends React.Component {
             <Footer language={this.state.language} />
           </>
         ) : (
-          <div>Loading</div>
+          <div className="loading">
+            <p>Loading...</p>
+          </div>
         )}
       </div>
     );
