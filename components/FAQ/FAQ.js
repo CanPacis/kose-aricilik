@@ -3,6 +3,7 @@ import styles from "./FAQ.module.css";
 
 import Question from "@/components/Question/Question";
 
+import questions from "./questions";
 import Service from "@/service/Service";
 
 export default class FAQ extends React.Component {
@@ -16,9 +17,9 @@ export default class FAQ extends React.Component {
     return (
       <div className={styles.container}>
         <h1>{language.faq_full}</h1>
-        {this.props.questions.map((question) => (
-          <Question key={question[0]} title={question[0]}>
-            {question[1]}
+        {questions.map((question) => (
+          <Question key={question.title} title={question.title}>
+            {question.content}
           </Question>
         ))}
       </div>
