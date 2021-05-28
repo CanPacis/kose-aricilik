@@ -17,11 +17,15 @@ export default class FAQ extends React.Component {
     return (
       <div className={styles.container}>
         <h1>{language.faq_full}</h1>
-        {questions.map((question) => (
+        {questions.length > 0 ?
+        questions.map((question) => (
           <Question key={question.title} title={question.title}>
             {question.content}
           </Question>
-        ))}
+        ))
+        :
+        <h2>{language.no_questions_yet}</h2>
+        }
       </div>
     );
   }

@@ -50,13 +50,24 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(232, 176, 4, 0.4);
-  backdrop-filter: blur(4px);
   color: var(--main-dark-text-color);
   z-index: 1000;
   flex-direction: column;
   padding: var(--layout-padding);
   justify-content: center;
+  transition: 200ms opacity ease-in-out;
+}
+
+.overlay {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(232, 176, 4, 0.4);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9;
   transition: 200ms opacity ease-in-out;
 }
 

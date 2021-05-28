@@ -4,4 +4,5 @@
 
 .container > h1 {
   margin: 20px 0;
+  color: var(--primary);
 }

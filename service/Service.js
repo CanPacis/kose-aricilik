@@ -41,7 +41,7 @@ export default class Service {
         faq_full: "Sıkça Sorulan Sorular",
         ok: "Tamam",
         hero: {
-          title: "DEDEMİN BALLARI",
+          title: "KÖSE ARICILIK",
           content:
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.",
         },
@@ -74,7 +74,7 @@ export default class Service {
         name: "İSİM",
         message: "MESAJ",
         copyright: {
-          message: "DEDEMİN BALLARI ® - BİR KÖSE ARICILIK MARKASI",
+          message: "KÖSE ARICILIK®",
           year: "2021",
         },
         alert: {
@@ -82,6 +82,7 @@ export default class Service {
           error: (message) => `Mesaj Gönderilirken Bir Hata Olştu. ${message}`,
         },
         no_product_yet: "Henüz Bir Ürün Yok",
+        no_questions_yet: "Henüz Bir Soru Yok",
       },
       en: {
         homepage: "Homepage",
@@ -91,7 +92,7 @@ export default class Service {
         faq_full: "Frequently Asked Questions",
         ok: "Okay",
         hero: {
-          title: "DEDEMİN BALLARI",
+          title: "KÖSE ARICILIK",
           content:
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.",
         },
@@ -124,7 +125,7 @@ export default class Service {
         name: "Name",
         message: "Message",
         copyright: {
-          message: "DEDEMİN BALLARI ® - A KÖSE ARICILIK BRAND",
+          message: "KÖSE ARICILIK®",
           year: "2021",
         },
         alert: {
@@ -133,6 +134,7 @@ export default class Service {
             `An Error Occurred While Sending Your Message. ${message}`,
         },
         no_product_yet: "There Are No Products Yet",
+        no_questions_yet: "There Are No Questions Yet",
       },
     },
   };

@@ -117,6 +117,7 @@ class Navigation extends React.Component {
                 this.state.isMobileMenuOpen && styles.mobileOpen
               }`}
             >
+              <div onClick={() => this.toggleMenu(false)} className={styles.overlay} />
               <ul className={styles.inPage}>
                 {this.state.links.map((link, i) => (
                   <li
