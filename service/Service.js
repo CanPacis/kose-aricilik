@@ -83,6 +83,7 @@ export default class Service {
         },
         no_product_yet: "Henüz Bir Ürün Yok",
         no_questions_yet: "Henüz Bir Soru Yok",
+        email: "E-Posta",
       },
       en: {
         homepage: "Homepage",
@@ -135,6 +136,7 @@ export default class Service {
         },
         no_product_yet: "There Are No Products Yet",
         no_questions_yet: "There Are No Questions Yet",
+        email: "Email",
       },
     },
   };

@@ -24,25 +24,20 @@ export default class Hero extends React.Component {
     return (
       <div ref={this.wrapperRef} className={styles.container}>
         <div className={styles.main}>
-          <Navigation
-            changeLanguage={this.props.changeLanguage}
-            language={this.props.language}
-          />
+          <Navigation changeLanguage={this.props.changeLanguage} language={this.props.language} />
           <div className={styles.bannerWrapper}>
             <div className={styles.body}>
               <div className={styles.text}>
                 <h1>{language.hero.title}</h1>
                 <p>{language.hero.content}</p>
-                <Button
-                  onClick={this.handleClick}
-                  shiny
-                  type="primary"
-                  icon="cart_icon"
-                >
+                <Button onClick={this.handleClick} shiny type="primary" icon="cart_icon">
                   {language.order}
                 </Button>
               </div>
-              <img src="/images/kavanoz.webp" alt="Kavanoz" />
+              <div className={styles.images}>
+                <img className={styles.kestane} src="/images/kestane.webp" alt="Kavanoz" />
+                <img className={styles.cicek} src="/images/cicek.webp" alt="Kavanoz" />
+              </div>
             </div>
             <div className={styles.more}>
               <img src="/icons/down_icon.svg" alt="dahası" />

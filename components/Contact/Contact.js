@@ -13,6 +13,7 @@ export default class Contact extends React.Component {
     this.state = {
       name: "",
       message: "",
+      email: "",
       loading: false,
       modal: {
         open: false,
@@ -40,6 +41,7 @@ export default class Contact extends React.Component {
       state.modal.open = true;
       if (result.status === 200) {
         state.name = "";
+        state.email = "";
         state.message = "";
         state.modal.message = language.alert.sent;
       } else {
@@ -82,6 +84,12 @@ export default class Contact extends React.Component {
               onChange={(e) => this.setState({ name: e.target.value })}
               value={this.state.name}
               placeholder={language.name}
+            />
+            <Input
+              onChange={(e) => this.setState({ email: e.target.value })}
+              value={this.state.email}
+              type="email"
+              placeholder={language.email}
             />
             <Input
               onChange={(e) => this.setState({ message: e.target.value })}

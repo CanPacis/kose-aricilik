@@ -25,7 +25,7 @@ export default class Input extends React.Component {
         value={this.props.value}
         placeholder={this.props.placeholder}
         className={styles.input}
-        type="text"
+        type={this.props.type || "text"}
       />
     );
   }
