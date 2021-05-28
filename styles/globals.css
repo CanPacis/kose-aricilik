@@ -41,6 +41,7 @@ body {
   font-size: var(--main-text-size);
   color: var(--main-dark-text-color);
   font-family: "Poppins";
+  background-color: #fdfdfd;
 }
 
 *::selection {

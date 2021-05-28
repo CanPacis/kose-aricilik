@@ -19,8 +19,8 @@ export default class FAQ extends React.Component {
         <h1>{language.faq_full}</h1>
         {questions.length > 0 ?
         questions.map((question) => (
-          <Question key={question.title} title={question.title}>
-            {question.content}
+          <Question key={question[this.props.language].title} title={question[this.props.language].title}>
+            {question[this.props.language].content}
           </Question>
         ))
         :
