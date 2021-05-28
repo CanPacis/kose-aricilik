@@ -14,6 +14,26 @@ export default class Hero extends React.Component {
     this.imageRef = React.createRef();
   }
 
+  componentDidMount() {
+    document.addEventListener("mousemove", this.handleMouseMove)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousemove", this.handleMouseMove)
+  }
+
+  handleMouseMove = e => {
+    if(e.movementX > 10 || e.movementX < -10) {
+      this.updateImage(document.querySelector(`.${styles.cicek}`), 1200, e)
+      this.updateImage(document.querySelector(`.${styles.kestane}`), 2000, e)
+    }
+  }
+
+  updateImage(element, by, e) {
+    let left = parseFloat(element.style.left)
+    element.style.left = `${left + (e.movementX / by)}%`
+  }
+
   handleClick = () => {
     window.open("https://www.shopier.com/kosearicilik", "_blank").focus();
   };
@@ -35,8 +55,8 @@ export default class Hero extends React.Component {
                 </Button>
               </div>
               <div className={styles.images}>
-                <img className={styles.kestane} src="/images/kestane.webp" alt="Kavanoz" />
-                <img className={styles.cicek} src="/images/cicek.webp" alt="Kavanoz" />
+                <img style={{ left: "40%" }} className={styles.kestane} src="/images/kestane.webp" alt="Kavanoz" />
+                <img style={{ left: "12%" }} className={styles.cicek} src="/images/cicek.webp" alt="Kavanoz" />
               </div>
             </div>
             <div className={styles.more}>

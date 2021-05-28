@@ -83,14 +83,12 @@
 .cicek {
   height: 50vh;
   bottom: 20%;
-  left: 12%;
   animation: fadeIn2 1200ms ease-in-out;
 }
 
 .kestane {
   height: 42vh;
   bottom: 25%;
-  left: 40%;
   animation: fadeIn1 1200ms ease-in-out;
 }
 
