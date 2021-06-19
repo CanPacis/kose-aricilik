@@ -47,7 +47,7 @@ class Navigation extends React.Component {
         { label: language.homepage, to: "nav", type: "inpage" },
         { label: language.catalog, to: "#catalog", type: "inpage" },
         { label: language.contact, to: "#contact", type: "inpage" },
-        { label: language.faq, to: "/faq", type: "redirect" },
+        // { label: language.faq, to: "/faq", type: "redirect" },
       ],
       language: [
         { label: "tr", id: "tr" },
@@ -90,7 +90,7 @@ class Navigation extends React.Component {
                   </li>
                 ))}
               </ul>
-              <ul className={styles.language}>
+              {/* <ul className={styles.language}>
                 {this.state.language.map((lang) => (
                   <li
                     onClick={() => this.props.changeLanguage(lang.id)}
@@ -102,7 +102,7 @@ class Navigation extends React.Component {
                     {lang.label}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
             <div className={styles.mobileMenu}>
               <img

@@ -121,6 +121,9 @@
   .text p {
     width: 80%;
   }
+  .images {
+    flex: 2
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -133,6 +136,14 @@
   .body > img {
     display: none;
     flex: 0;
+  }
+  .images {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -90;
+    opacity: 0.05;
+    width: 80vw;
   }
 }
 

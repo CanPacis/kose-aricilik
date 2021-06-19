@@ -38,6 +38,10 @@
   width: 80%;
 }
 
+.wpActionWrapper {
+  width: 30%;
+}
+
 @media screen and (max-width: 900px) {
   .title {
     margin: 20px 0;
@@ -51,5 +55,14 @@
   .left > *,
   .right > * {
     margin: 4px 0;
+  }
+
+  .left,
+  .right {
+    margin: 12px 0;
+  }
+
+  .wpActionWrapper {
+    width: 100%;
   }
 }

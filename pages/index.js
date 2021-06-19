@@ -23,7 +23,7 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     this.setState({
-      language: window?.localStorage.getItem("language") || "en",
+      language: window?.localStorage.getItem("language") || "tr",
     });
   }
 
@@ -37,7 +37,7 @@ export default class Home extends React.Component {
       <div>
         <Head>
           <meta charSet="utf-8" />
-          <title>Dedmin Balları</title>
+          <title>Köse Arıcılık</title>
           <link rel="shortcut icon" href="/images/favicon.png" />
           <link
             rel="stylesheet"

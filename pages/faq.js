@@ -6,24 +6,6 @@ import Navigation from "@/components/Navigation/Navigation";
 import FAQ from "@/components/FAQ/FAQ";
 
 export default class SSSPage extends React.Component {
-  // static async getInitialProps(ctx) {
-  //   const res = await fetch(
-  //     "https://api.box.com/2.0/files/811327841741/content/",
-  //     {
-  //       headers: {
-  //         Authorization: "Bearer 44UbFiUoxa3s3N0rOrlTiSu4mVP8AzFr",
-  //       },
-  //     }
-  //   );
-  //   const text = await res.text();
-  //   return {
-  //     file: text
-  //       .split("-")
-  //       .slice(1)
-  //       .map((q) => q.split("\n").filter((c) => c.trim().length > 0)),
-  //   };
-  // }
-
   constructor(props) {
     super(props);
 
@@ -62,7 +44,8 @@ export default class SSSPage extends React.Component {
               changeLanguage={this.changeLanguage}
               language={this.state.language}
             />
-            <FAQ language={this.state.language} />
+            {/* <FAQ language={this.state.language} /> */}
+            <p style={{margin: "var(--layout-padding)"}}>Dostum burayı henüz kullanıma açmadık. Bence ana sayfaya geri dön.</p>
           </>
         ) : (
           <div className="loading">

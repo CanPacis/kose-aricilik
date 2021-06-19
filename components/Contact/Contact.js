@@ -45,7 +45,7 @@ export default class Contact extends React.Component {
         state.message = "";
         state.modal.message = language.alert.sent;
       } else {
-        state.modal.message = language.alert.error(result.response)
+        state.modal.message = language.alert.error(result.response);
       }
       this.setState(state);
     }
@@ -59,11 +59,15 @@ export default class Contact extends React.Component {
     this.setState(state);
   };
 
+  redirectToWp = () => {
+    window.open("https://wa.me/message/5UR4HPFZIQPOK1", "_blank").focus();
+  };
+
   render() {
     let language = Service.Language.languages[this.props.language];
 
     return (
-      <div>
+      <div lang="tr">
         <h1 className={styles.title} id="contact">
           {language.contact}
         </h1>
@@ -76,8 +80,19 @@ export default class Contact extends React.Component {
             </span>
             <span>
               <h2>{language.phone.title}</h2>
-              <p className={styles.description}>{language.phone.content}</p>
+              {language.phone.content.map((phone) => {
+                return (
+                  <p key={phone.no} className={styles.description}>
+                    <b>{phone.label}:</b> {phone.no}
+                  </p>
+                );
+              })}
             </span>
+            <div className={styles.wpActionWrapper}>
+              <Button fullwidth onClick={this.redirectToWp} type="wp">
+                {language.whatsapp}
+              </Button>
+            </div>
           </div>
           <div className={styles.right}>
             <Input

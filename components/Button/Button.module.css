@@ -40,6 +40,16 @@
   color: var(--main-light-text-color);
 }
 
+.wp {
+  color: var(--whatsapp);
+  border: 2px solid var(--whatsapp);
+}
+
+.wp:hover {
+  background-color: var(--whatsapp);
+  color: var(--main-light-text-color);
+}
+
 .disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -124,9 +134,13 @@
     brightness(106%) contrast(97%);
 }
 
+.fullwidth {
+  width: 100%
+}
+
 
 @media screen and (max-width: 860px) {
-  .button {
+  .button:not(.fullwidth) {
     width: 140px;
   }
 }

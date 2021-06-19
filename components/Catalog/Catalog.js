@@ -10,7 +10,7 @@ export default class Catalog extends React.Component {
   }
 
   renderAmount(price) {
-    return `${price.amount} ${price.type}`;
+    return `${price.amount.toFixed(2)} ${price.type}`;
   }
 
   renderProducts = () => {

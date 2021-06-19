@@ -11,7 +11,7 @@ export default class Button extends React.Component {
       <button
         disabled={this.props.disabled}
         onClick={this.props.onClick}
-        className={`${styles.button} ${styles[this.props.type]} ${
+        className={`${styles.button} ${styles[this.props.type]} ${this.props.fullwidth ? styles["fullwidth"] : ""} ${
           this.props.disabled && styles.disabled
         } ${this.props.shiny && styles.shiny}`}
         >

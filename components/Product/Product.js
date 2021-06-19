@@ -12,7 +12,7 @@ export default class Product extends React.Component {
 
   render() {
     return (
-      <article onClick={this.handleClick} className={styles.card}>
+      <article lang="tr" onClick={this.handleClick} className={styles.card}>
         <img src={this.props.image} alt="product cover" />
         <div className={styles.meta}>
           <h3 className={styles.productTitle}>{this.props.title}</h3>
