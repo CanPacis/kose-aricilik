@@ -28,7 +28,7 @@ export default class Delivery extends React.Component {
     let language = Service.Language.languages[this.props.language];
 
     return (
-      <div className={styles.container}>
+      <div lang="tr" className={styles.container}>
         <Type icon="/images/gel_al.svg" title={language.take_away.title}>
           {language.take_away.content}
         </Type>
